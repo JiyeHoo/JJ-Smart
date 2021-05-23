@@ -112,7 +112,7 @@ public final class MainSampleListActivity extends AppCompatActivity {
         TuyaHomeSdk.getHomeManagerInstance().queryHomeList(new ITuyaGetHomeListCallback() {
             @Override
             public void onSuccess(List<HomeBean> homeBeanList) {
-                Toast.makeText(MainSampleListActivity.this, "获取家庭列表成功", Toast.LENGTH_LONG).show();
+                Toast.makeText(MainSampleListActivity.this, "初始化成功", Toast.LENGTH_LONG).show();
 
                 if (!homeBeanList.isEmpty()) {
                     Log.d(TAG, "home list 不为空");

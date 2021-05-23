@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Tuya SDK</string>
+    <string name="app_name">QSM·供热</string>
 
-    <string name="user_guide_title">JJ Smart</string>
+    <string name="user_guide_title">QSM·供热</string>
     <string name="user_login">登录</string>
     <string name="user_country_code">国家码</string>
     <string name="user_account_tips">邮箱或手机号</string>
@@ -20,10 +20,10 @@
     <string name="user_email_address">邮箱</string>
     <string name="user_time_zone">时区</string>
     <string name="user_management">用户管理</string>
-    <string name="user_logout">登出</string>
+    <string name="user_logout">退出</string>
 
     <string name="app_version_tips">版本号: %s</string>
-    <string name="main_logo">JJ 智能</string>
+    <string name="main_logo">QSM·供热</string>
     <string name="user_update_coordinate">更新坐标</string>
     <string name="user_unit_temperature">温度单位</string>
     <string name="user_deactivate_account">停用账号</string>

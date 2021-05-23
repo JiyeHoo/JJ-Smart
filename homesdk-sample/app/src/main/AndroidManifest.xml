@@ -29,7 +29,7 @@
         <!--        User        -->
         <activity
             android:name=".user.main.UserFuncActivity"
-            android:screenOrientation="portrait">
+            android:screenOrientation="portrait" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -38,7 +38,8 @@
         <activity
             android:name=".user.login.UserLoginActivity"
             android:exported="false"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="portrait" >
+        </activity>
         <activity
             android:name=".user.register.UserRegisterActivity"
             android:exported="false"

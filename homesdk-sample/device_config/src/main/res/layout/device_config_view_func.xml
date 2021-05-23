@@ -3,34 +3,97 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/device_config_module_title"
-        android:paddingLeft="20dp"
-        android:layout_marginTop="60dp"
-        android:textSize="18sp"
-        android:paddingStart="20dp"
-        tools:ignore="RtlSymmetry" />
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/civ_ez"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:src="@drawable/ic_ez"/>-->
 
-    <TextView
-        style="@style/item_func"
-        android:id="@+id/tvEzMode"
-        android:text="@string/device_config_ez_title" />
-
-    <View
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_ez"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginLeft="20dp"
-        android:background="#FF888888"
-        android:layout_marginStart="20dp" />
+        android:layout_height="100dp"
+        android:layout_marginTop="100dp"
+        app:cardCornerRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
 
-    <TextView
-        style="@style/item_func"
-        android:id="@+id/tvApMode"
-        android:text="@string/device_config_ap_title" />
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_ez"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="EZ 配网模式"
+                android:textSize="32sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_ap"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_ap"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="AP 配网模式"
+                android:textSize="32sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+<!--    <TextView-->
+<!--        style="@style/item_func"-->
+<!--        android:id="@+id/tvEzMode"-->
+<!--        android:text="@string/device_config_ez_title" />-->
+
+<!--    <View-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="1dp"-->
+<!--        android:layout_marginLeft="20dp"-->
+<!--        android:background="#FF888888"-->
+<!--        android:layout_marginStart="20dp" />-->
+
+<!--    <de.hdodenhof.circleimageview.CircleImageView-->
+<!--        android:id="@+id/civ_ap"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="150dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:layout_marginTop="30dp"-->
+<!--        android:src="@drawable/ic_ap"/>-->
+
+<!--    <TextView-->
+<!--        style="@style/item_func"-->
+<!--        android:id="@+id/tvApMode"-->
+<!--        android:text="@string/device_config_ap_title" />-->
 
 
 <!--    <View-->

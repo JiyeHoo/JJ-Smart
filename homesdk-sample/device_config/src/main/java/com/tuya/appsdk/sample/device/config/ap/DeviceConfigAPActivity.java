@@ -54,6 +54,8 @@ public class DeviceConfigAPActivity extends AppCompatActivity implements View.On
     private String strPassword;
     private String mToken;
     private ITuyaActivator mTuyaActivator;
+    private Button mBtnGetToken;
+    private EditText mEtToken;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,6 +77,11 @@ public class DeviceConfigAPActivity extends AppCompatActivity implements View.On
         btnSearch.setOnClickListener(this);
         mContentTv = findViewById(R.id.content_tv);
         mContentTv.setText(getString(R.string.device_config_ap_description));
+
+        mEtToken = findViewById(R.id.et_token);
+        mBtnGetToken = findViewById(R.id.btn_get_token);
+        mBtnGetToken.setOnClickListener(this);
+
     }
 
     @Override
@@ -94,7 +101,6 @@ public class DeviceConfigAPActivity extends AppCompatActivity implements View.On
                         public void onSuccess(String token) {
                             mToken = token;
                             onClickSetting();
-
                         }
 
 
@@ -103,8 +109,25 @@ public class DeviceConfigAPActivity extends AppCompatActivity implements View.On
 
                         }
                     });
+        }
 
+        if (v.getId() == R.id.btn_get_token) {
+            long homeId = HomeModel.getCurrentHome(this);
+            TuyaHomeSdk.getActivatorInstance().getActivatorToken(homeId, new ITuyaActivatorGetToken() {
+                @Override
+                public void onSuccess(String token) {
+                    Log.d(TAG, "获取token成功:" + token);
+                    runOnUiThread(() ->
+                            mEtToken.setText(token));
+                }
 
+                @Override
+                public void onFailure(String errorCode, String errorMsg) {
+                    Log.d(TAG, "获取token失败:" + errorMsg);
+                    runOnUiThread(() ->
+                            Toast.makeText(DeviceConfigAPActivity.this, "获取失败", Toast.LENGTH_LONG).show());
+                }
+            });
         }
 
     }

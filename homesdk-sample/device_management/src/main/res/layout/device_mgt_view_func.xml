@@ -2,20 +2,50 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/device_mgt_module_title"
-        android:paddingLeft="20dp"
-        android:layout_marginTop="60dp"
-        android:textSize="18dp" />
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/device_mgt_module_title"-->
+<!--        android:paddingLeft="20dp"-->
+<!--        android:layout_marginTop="60dp"-->
+<!--        android:textSize="18dp" />-->
 
-    <TextView
-        style="@style/item_func"
+<!--    <TextView-->
+<!--        style="@style/item_func"-->
+<!--        android:id="@+id/tvDeviceList"-->
+<!--        android:text="@string/device_mgt_list" />-->
+
+    <androidx.cardview.widget.CardView
         android:id="@+id/tvDeviceList"
-        android:text="@string/device_mgt_list" />
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        app:cardCornerRadius="20dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="20dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/ic_dm"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="设备管理"
+                android:textSize="32sp"
+                android:gravity="center"/>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
 <!--    <View-->
 <!--        android:layout_width="match_parent"-->

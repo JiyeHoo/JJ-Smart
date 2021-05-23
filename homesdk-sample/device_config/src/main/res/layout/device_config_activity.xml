@@ -74,6 +74,17 @@
                 android:layout_marginTop="20dp"
                 android:text="@string/device_config_search" />
 
+            <EditText
+                android:id="@+id/et_token"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"/>
+
+            <Button
+                android:id="@+id/btn_get_token"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="测试获取token" />
+
 
             <com.google.android.material.progressindicator.CircularProgressIndicator
                 android:id="@+id/cpiLoading"

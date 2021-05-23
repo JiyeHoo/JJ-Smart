@@ -14,6 +14,7 @@ package com.tuya.appsdk.sample.user.login;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,27 +41,25 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
         setContentView(R.layout.user_activity_login);
 
         Toolbar toolbar = findViewById(R.id.topAppBar);
         setSupportActionBar(toolbar);
         toolbar.setNavigationOnClickListener(v -> finish());
 
-        Button btnLogin = findViewById(R.id.btnLogin);
-        Button btnForget = findViewById(R.id.btnForget);
-        btnLogin.setOnClickListener(this);
-        btnForget.setOnClickListener(this);
+        findViewById(R.id.btnLogin).setOnClickListener(this);
+        findViewById(R.id.btnForget).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         EditText etAccount = findViewById(R.id.etAccount);
         String strAccount = etAccount.getText().toString();
-//        EditText etCountryCode = findViewById(R.id.etCountryCode);
-//        String strCountryCode = etCountryCode.getText().toString();
         EditText etPassword = findViewById(R.id.etPassword);
         String strPassword = etPassword.getText().toString();
 
+        // 点击登录按钮
         if (v.getId() == R.id.btnLogin) {
             ILoginCallback callback = new ILoginCallback() {
                 @Override
@@ -69,12 +68,8 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
                             "Login success",
                             Toast.LENGTH_SHORT).show();
 
-                    startActivity(
-                            new Intent(
-                                    UserLoginActivity.this,
-                                    MainSampleListActivity.class
-                            )
-                    );
+                    startActivity(new Intent(UserLoginActivity.this, MainSampleListActivity.class));
+                    finish();
                 }
 
                 @Override
@@ -89,7 +84,10 @@ public class UserLoginActivity extends AppCompatActivity implements View.OnClick
             } else {
                 TuyaHomeSdk.getUserInstance().loginWithPhonePassword("86", strAccount, strPassword, callback);
             }
-        } else if (v.getId() == R.id.btnForget) {
+        }
+
+        // 点击忘记密码
+        if (v.getId() == R.id.btnForget) {
             startActivity(new Intent(this, UserResetPasswordActivity.class));
         }
     }

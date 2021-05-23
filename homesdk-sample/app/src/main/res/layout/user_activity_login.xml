@@ -61,18 +61,21 @@
             </com.google.android.material.textfield.TextInputLayout>
 
             <Button
-                android:id="@+id/btnForget"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="50dp"
-                android:text="@string/user_forget_password_tips" />
-
-            <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="50dp"
                 android:text="@string/user_login" />
+
+            <Button
+                android:id="@+id/btnForget"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/user_forget_password_tips" />
+
+
+
         </LinearLayout>
 
     </androidx.core.widget.NestedScrollView>

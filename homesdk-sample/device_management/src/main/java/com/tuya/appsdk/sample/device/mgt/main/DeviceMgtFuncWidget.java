@@ -18,6 +18,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.cardview.widget.CardView;
+
 import com.tuya.appsdk.sample.device.mgt.R;
 import com.tuya.appsdk.sample.device.mgt.group.GroupListActivity;
 import com.tuya.appsdk.sample.device.mgt.list.activity.DeviceMgtListActivity;
@@ -39,7 +41,8 @@ public class DeviceMgtFuncWidget {
 
     private void initView(final View rootView) {
         // Device list
-        rootView.findViewById(R.id.tvDeviceList).setOnClickListener(v -> {
+        CardView mCvDeviceList = rootView.findViewById(R.id.tvDeviceList);
+        mCvDeviceList.setOnClickListener(v -> {
             if ((HomeModel.getCurrentHome(v.getContext()) == 0)) {
                 Toast.makeText(
                         rootView.getContext(),
@@ -50,6 +53,7 @@ public class DeviceMgtFuncWidget {
                 Intent intent = new Intent(v.getContext(), DeviceMgtListActivity.class);
                 intent.putExtra("type", DeviceListTypePage.NORMAL_DEVICE_LIST);
                 v.getContext().startActivity(intent);
+
             }
 
         });

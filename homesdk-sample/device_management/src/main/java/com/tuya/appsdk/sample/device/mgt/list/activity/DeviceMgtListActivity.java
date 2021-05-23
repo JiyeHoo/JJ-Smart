@@ -63,12 +63,7 @@ public class DeviceMgtListActivity extends AppCompatActivity {
 
         Toolbar toolbar = findViewById(R.id.topAppBar);
         setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        toolbar.setNavigationOnClickListener(v -> finish());
         toolbar.setTitle(type == 1 ? getString(R.string.device_mgt_list) :
                 getString(R.string.device_zb_gateway_list));
 

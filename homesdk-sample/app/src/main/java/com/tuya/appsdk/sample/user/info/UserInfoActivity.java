@@ -135,48 +135,42 @@ public class UserInfoActivity extends AppCompatActivity {
         });
 
 
-        this.findViewById(R.id.Updata).setOnClickListener(new View.OnClickListener() {
-            @Override
-            public final void onClick(View it) {
-                String[] country = new String[]{"China",
-                        "America", "English", "Australia", "Japan", "Egypt"};
+        this.findViewById(R.id.Updata).setOnClickListener(it -> {
+            String[] country = new String[]{"China",
+                    "America", "English", "Australia", "Japan", "Egypt"};
 
-                AlertDialog.Builder builder = new AlertDialog.Builder(UserInfoActivity.this);
+            AlertDialog.Builder builder = new AlertDialog.Builder(UserInfoActivity.this);
 
-                builder.setItems(country, new DialogInterface.OnClickListener() {
-                    @Override
-                    public final void onClick(DialogInterface dialog, int which) {
-                        switch (which) {
-                            case 1:
-                                lat = ("116.20");
-                                lon = ("39.55");
-                                break;
-                            case 2:
-                                lat = ("-77.02");
-                                lon = ("39.91");
-                                break;
-                            case 3:
-                                lat = ("-0.05");
-                                lon = ("51.36");
-                                break;
-                            case 4:
-                                lat = ("139.46");
-                                lon = ("35.42");
-                                break;
-                            case 5:
-                                lat = ("31.14");
-                                lon = ("30.01");
-                                break;
-                            default:
-                                break;
-                        }
+            builder.setItems(country, (dialog, which) -> {
+                switch (which) {
+                    case 1:
+                        lat = ("116.20");
+                        lon = ("39.55");
+                        break;
+                    case 2:
+                        lat = ("-77.02");
+                        lon = ("39.91");
+                        break;
+                    case 3:
+                        lat = ("-0.05");
+                        lon = ("51.36");
+                        break;
+                    case 4:
+                        lat = ("139.46");
+                        lon = ("35.42");
+                        break;
+                    case 5:
+                        lat = ("31.14");
+                        lon = ("30.01");
+                        break;
+                    default:
+                        break;
+                }
 
-                        TuyaSdk.setLatAndLong(lat, lon);
-                        Toast.makeText(UserInfoActivity.this, "success", Toast.LENGTH_SHORT).show();
-                    }
-                });
-                builder.create().show();
-            }
+                TuyaSdk.setLatAndLong(lat, lon);
+                Toast.makeText(UserInfoActivity.this, "success", Toast.LENGTH_SHORT).show();
+            });
+            builder.create().show();
         });
         TextView btTimeZone = findViewById(R.id.btTimeZone);
         btTimeZone.setText(user.getTimezoneId());

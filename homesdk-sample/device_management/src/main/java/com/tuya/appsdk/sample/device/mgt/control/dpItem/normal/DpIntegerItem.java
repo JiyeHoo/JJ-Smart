@@ -67,7 +67,7 @@ public class DpIntegerItem extends FrameLayout {
         ValueSchemaBean valueSchemaBean = SchemaMapper.toValueSchema(schemaBean.property);
         double offset = 0;
         if (valueSchemaBean.min < 0){
-            offset = 0 - valueSchemaBean.min;
+            offset = -valueSchemaBean.min;
         }
         double scale = Math.pow(10.0,valueSchemaBean.getScale());
         if (value > valueSchemaBean.max) {
