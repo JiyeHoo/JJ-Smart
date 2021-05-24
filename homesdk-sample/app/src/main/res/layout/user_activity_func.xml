@@ -6,15 +6,23 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="30sp"
+        android:textSize="60sp"
         android:layout_marginTop="50dp"
         android:gravity="center_horizontal"
         android:text="@string/user_guide_title" />
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="智能供热系统"
+        android:layout_marginTop="200dp"
+        android:textSize="20sp"
+        android:gravity="center_horizontal"/>
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:orientation="horizontal"
         android:paddingLeft="20dp"
         android:paddingRight="20dp"
         android:layout_gravity="bottom"
@@ -23,14 +31,17 @@
 
         <Button
             android:id="@+id/btnLogin"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
             android:text="@string/user_login" />
 
         <Button
             android:id="@+id/btnRegister"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="80dp"
+            android:layout_marginLeft="10dp"
             android:text="@string/user_register" />
     </LinearLayout>
 
@@ -39,7 +50,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal|bottom"
         android:layout_marginBottom="10dp"
-        android:id="@+id/tvAppVersion" />
+        android:id="@+id/tvAppVersion"
+        android:text="桂林理工大学"/>
 
 </FrameLayout>
 

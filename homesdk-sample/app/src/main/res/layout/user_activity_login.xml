@@ -41,7 +41,8 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etAccount"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp" />
             </com.google.android.material.textfield.TextInputLayout>
 
 
@@ -57,22 +58,33 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:id="@+id/etPassword"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"/>
             </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:id="@+id/btnForget"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/user_forget_password_tips"
+                android:layout_marginTop="10dp"
+                android:gravity="end"/>
 
             <Button
                 android:id="@+id/btnLogin"
                 android:layout_width="match_parent"
-                android:layout_height="48dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_height="60dp"
                 android:layout_marginTop="50dp"
                 android:text="@string/user_login" />
 
-            <Button
-                android:id="@+id/btnForget"
-                android:layout_width="match_parent"
-                android:layout_height="48dp"
-                android:layout_marginTop="10dp"
-                android:text="@string/user_forget_password_tips" />
+<!--            <Button-->
+<!--                android:id="@+id/btnForget"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="48dp"-->
+<!--                android:layout_marginTop="10dp"-->
+<!--                android:text="@string/user_forget_password_tips" />-->
 
 
 

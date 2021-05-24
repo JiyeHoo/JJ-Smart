@@ -51,14 +51,7 @@ public class UserFuncActivity extends AppCompatActivity implements View.OnClickL
         btnLogin.setOnClickListener(this);
 
 
-        try {
-            PackageInfo pInfo = this.getPackageManager().getPackageInfo(this.getPackageName(), 0);
 
-            TextView tvAppVersion = findViewById(R.id.tvAppVersion);
-            tvAppVersion.setText(String.format(getString(R.string.app_version_tips), pInfo.versionName));
-        } catch (PackageManager.NameNotFoundException e) {
-            e.printStackTrace();
-        }
     }
 
 
