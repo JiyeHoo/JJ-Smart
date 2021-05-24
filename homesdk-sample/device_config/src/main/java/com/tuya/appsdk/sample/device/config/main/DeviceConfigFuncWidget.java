@@ -14,7 +14,6 @@ package com.tuya.appsdk.sample.device.config.main;
 
 import android.content.Context;
 import android.content.Intent;
-import android.graphics.Color;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.Toast;
@@ -23,15 +22,9 @@ import androidx.cardview.widget.CardView;
 
 import com.tuya.appsdk.sample.device.config.R;
 import com.tuya.appsdk.sample.device.config.ap.DeviceConfigAPActivity;
-import com.tuya.appsdk.sample.device.config.ble.DeviceConfigBleAndDualActivity;
 import com.tuya.appsdk.sample.device.config.ez.DeviceConfigEZActivity;
-import com.tuya.appsdk.sample.device.config.mesh.DeviceConfigMeshActivity;
-import com.tuya.appsdk.sample.device.config.qrcode.DeviceConfigQrCodeDeviceActivity;
-import com.tuya.appsdk.sample.device.config.zigbee.gateway.DeviceConfigZbGatewayActivity;
-import com.tuya.appsdk.sample.device.config.zigbee.sub.DeviceConfigZbSubDeviceActivity;
 import com.tuya.appsdk.sample.resource.HomeModel;
 
-import de.hdodenhof.circleimageview.CircleImageView;
 import kotlin.jvm.internal.Intrinsics;
 
 /**

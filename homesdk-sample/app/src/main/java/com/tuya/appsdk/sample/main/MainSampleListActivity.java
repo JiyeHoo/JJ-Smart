@@ -16,7 +16,6 @@ package com.tuya.appsdk.sample.main;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
@@ -25,9 +24,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.tuya.appsdk.sample.R;
 import com.tuya.appsdk.sample.device.config.main.DeviceConfigFuncWidget;
 import com.tuya.appsdk.sample.device.mgt.main.DeviceMgtFuncWidget;
-import com.tuya.appsdk.sample.home.main.HomeFuncWidget;
 import com.tuya.appsdk.sample.resource.HomeModel;
-import com.tuya.appsdk.sample.user.info.UserInfoActivity;
 import com.tuya.appsdk.sample.user.main.UserFuncActivity;
 import com.tuya.smart.android.user.api.ILogoutCallback;
 import com.tuya.smart.home.sdk.TuyaHomeSdk;

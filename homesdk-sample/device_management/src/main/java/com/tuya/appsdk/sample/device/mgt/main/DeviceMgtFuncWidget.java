@@ -21,7 +21,6 @@ import android.widget.Toast;
 import androidx.cardview.widget.CardView;
 
 import com.tuya.appsdk.sample.device.mgt.R;
-import com.tuya.appsdk.sample.device.mgt.group.GroupListActivity;
 import com.tuya.appsdk.sample.device.mgt.list.activity.DeviceMgtListActivity;
 import com.tuya.appsdk.sample.device.mgt.list.tag.DeviceListTypePage;
 import com.tuya.appsdk.sample.resource.HomeModel;
