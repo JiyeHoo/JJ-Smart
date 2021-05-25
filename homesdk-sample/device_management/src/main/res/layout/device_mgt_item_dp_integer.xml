@@ -10,11 +10,19 @@
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="20dp" />
 
-    <com.google.android.material.slider.Slider
-        android:id="@+id/slDp"
-        android:layout_width="150dp"
+    <TextView
+        android:id="@+id/tv_dp_value_int"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical|right"
-        android:layout_marginRight="20dp" />
+        android:layout_marginRight="20dp"
+        android:text="value" />
+
+<!--    <com.google.android.material.slider.Slider-->
+<!--        android:id="@+id/slDp"-->
+<!--        android:layout_width="150dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center_vertical|right"-->
+<!--        android:layout_marginRight="20dp" />-->
 
 </FrameLayout>

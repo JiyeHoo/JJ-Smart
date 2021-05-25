@@ -64,12 +64,7 @@ public class DeviceConfigAPActivity extends AppCompatActivity implements View.On
 
         Toolbar toolbar = findViewById(R.id.topAppBar);
         setSupportActionBar(toolbar);
-        toolbar.setNavigationOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                finish();
-            }
-        });
+        toolbar.setNavigationOnClickListener(v -> finish());
         toolbar.setTitle(getString(R.string.device_config_ap_title));
 
         cpiLoading = findViewById(R.id.cpiLoading);

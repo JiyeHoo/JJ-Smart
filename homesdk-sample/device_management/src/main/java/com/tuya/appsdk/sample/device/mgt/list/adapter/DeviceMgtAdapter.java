@@ -58,27 +58,22 @@ public final class DeviceMgtAdapter extends RecyclerView.Adapter<DeviceMgtAdapte
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         ViewHolder holder = new ViewHolder(LayoutInflater.from(parent.getContext()).inflate(R.layout.device_mgt_item, parent, false));
         holder.itemView.setOnClickListener(v -> {
-            if (CameraUtils.ipcProcess(v.getContext(), ((DeviceBean) DeviceMgtAdapter.this.getData().get(holder.getAdapterPosition())).getDevId())) {
+            if (CameraUtils.ipcProcess(v.getContext(), DeviceMgtAdapter.this.getData().get(holder.getAdapterPosition()).getDevId())) {
                 return;
             }
             switch (type) {
                 case 1:
+                case 3:
                     // Navigate to device management
                     Intent intent = new Intent(v.getContext(), DeviceMgtControlActivity.class);
-                    intent.putExtra("deviceId", ((DeviceBean) DeviceMgtAdapter.this.getData().get(holder.getAdapterPosition())).getDevId());
+                    intent.putExtra("deviceId", DeviceMgtAdapter.this.getData().get(holder.getAdapterPosition()).getDevId());
                     v.getContext().startActivity(intent);
                     break;
                 case 2:
                     // Navigate to zigBee sub device management
                     Intent intent2 = new Intent(v.getContext(), DeviceSubZigbeeActivity.class);
-                    intent2.putExtra("deviceId", ((DeviceBean) DeviceMgtAdapter.this.getData().get(holder.getAdapterPosition())).getDevId());
+                    intent2.putExtra("deviceId", DeviceMgtAdapter.this.getData().get(holder.getAdapterPosition()).getDevId());
                     v.getContext().startActivity(intent2);
-                    break;
-                case 3:
-                    // Navigate to device management
-                    Intent intent3 = new Intent(v.getContext(), DeviceMgtControlActivity.class);
-                    intent3.putExtra("deviceId", ((DeviceBean) DeviceMgtAdapter.this.getData().get(holder.getAdapterPosition())).getDevId());
-                    v.getContext().startActivity(intent3);
                     break;
             }
         });
@@ -87,7 +82,7 @@ public final class DeviceMgtAdapter extends RecyclerView.Adapter<DeviceMgtAdapte
 
     @Override
     public void onBindViewHolder(@NonNull DeviceMgtAdapter.ViewHolder holder, int position) {
-        DeviceBean bean = (DeviceBean) data.get(position);
+        DeviceBean bean = data.get(position);
         holder.tvDeviceName.setText(bean.name);
         holder.tvStatus.setText(holder.itemView.getContext().getString(bean.getIsOnline() ? R.string.device_mgt_online : R.string.device_mgt_offline));
 
